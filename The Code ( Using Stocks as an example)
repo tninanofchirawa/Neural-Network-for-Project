@@ -1,7 +1,6 @@
 import numpy as np
-import tensorflow as tf
 from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import Dense
+from tensorflow.keras.layers import Dense, Input
 from scipy.special import factorial
 import matplotlib.pyplot as plt
 from sklearn.cluster import KMeans
@@ -46,7 +45,8 @@ pi = np.array([0.5, 0.3, 0.2])
 
 # Build a neural network for emission probabilities
 mdl = Sequential([
-    Dense(16, activation='relu', input_shape=(d,)),
+    Input(shape=(d,)),  # Define the input shape explicitly
+    Dense(16, activation='relu'),
     Dense(N, activation='softmax')  # Output size = number of hidden states
 ])
 mdl.compile(optimizer='adam', loss='categorical_crossentropy')
@@ -127,8 +127,9 @@ plt.legend()
 
 # Plot smoothed probabilities for each state
 plt.subplot(2, 1, 2)
-for state in range(N):
-    plt.plot(smoothed_probs[:, state], label=f'State {state + 1}')
+state_names = ['Bull', 'Bear', 'Neutral']
+for state, name in enumerate(state_names):
+    plt.plot(smoothed_probs[:, state], label=name)
 plt.title('Smoothed Probabilities for Hidden States')
 plt.xlabel('Time Steps')
 plt.ylabel('Probability')
