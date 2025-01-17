@@ -1,3 +1,2 @@
 # Neural-Network-for-Project
-This is the code for the Project "Enhancing Neural network with the help of Binomile Theorm"
-
+This is the code for the Project "Enhancing Neural Network Models Through Binomial Theorem and Combinatorial Geometric Series Integration"
