@@ -1,7 +1,12 @@
 About this Code
 
 This code is written for a research paper "Enhancing Neural Network Models Through Binomial Theorem and Combinatorial Geometric Series Integration".
-The code's main contributor is "Elizabeth Ann Ninan"
+
+The code's main contributor is "Anna".
+Github link is - https://github.com/Zohar-iris
+
+This Research paper was wriiten for "International Conference on Computational Mathematics and Advances in Modern Technology (ICCMAMT - 2024) - Hindustan Institute of Science and Technology, Chennai" 
+
 
 
 #Introduction
