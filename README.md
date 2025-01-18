@@ -1,3 +1,9 @@
+About this Code
+
+This code is written for a research paper "Enhancing Neural Network Models Through Binomial Theorem and Combinatorial Geometric Series Integration".
+The code's main contributor is "Elizabeth Ann Ninan"
+
+
 #Introduction
 
 Imagine building a robot. You wouldn't just slap some metal together and hope for the best, right? You'd need blueprints, measurements, and a solid understanding of physics to make sure it works. That's where math comes in for computer science too!
