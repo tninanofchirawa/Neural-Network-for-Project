@@ -18,10 +18,83 @@ Github link is - https://github.com/Zohar-iris
 
 This Research paper was wriiten for "International Conference on Computational Mathematics and Advances in Modern Technology (ICCMAMT - 2024) - Hindustan Institute of Science and Technology, Chennai" 
 
+### Key Steps and Objectives:
 
 
 
-## Introduction
+#### Simulating Stock Trends:
+
+The stock prices are simulated with three distinct phases:
+Bullish trend: Gradual upward movement.
+Bearish trend: Gradual downward movement.
+Neutral trend: Random fluctuations.
+These phases are concatenated to mimic realistic stock price behavior.
+
+
+
+##### Preprocessing Data:
+
+Percentage changes in stock prices are computed to serve as input features for further analysis.
+Hidden Markov Model (HMM) Setup:
+
+
+
+##### A simple HMM is defined with:
+3 hidden states representing different market conditions.
+Transition probabilities (A) between states.
+Initial state probabilities (π).
+Neural Network for Emission Probabilities:
+
+A feedforward neural network is trained to map observations (percentage changes in stock prices) to hidden states using supervised learning.
+The labels for hidden states are derived using K-means clustering.
+The output of the network serves as emission probabilities.
+Binomial Series for Probability Scaling:
+
+The the_series function models a combinatorial binomial series, which scales probabilities non-linearly. This function is used to adjust emission probabilities for each hidden state.
+
+
+##### Forward and Backward Algorithms:
+
+###### Implemented to calculate:
+Forward probabilities (α): Probability of observing the sequence up to a given time step.
+Backward probabilities (β): Probability of observing the remaining sequence from a given time step.
+Smoothing Probabilities:
+
+Smoothed probabilities are computed by combining forward and backward probabilities, giving the posterior probabilities of hidden states at each time step.
+
+
+
+
+##### Likelihood of Observations:
+
+The total likelihood of the observation sequence is computed as a measure of how well the model fits the data.
+
+
+
+##### Visualization:
+
+Plots the simulated stock prices.
+Visualizes the smoothed probabilities of each hidden state over time.
+
+
+
+
+##### Applications:
+Stock Market Analysis: Identifying market phases (e.g., bullish, bearish, or neutral trends).
+Sequence Modeling: Applying HMMs combined with neural networks for other time-series data.
+Probability Computation: Utilizing combinatorial series for scaling and transformation of probabilities in statistical models.
+
+
+
+
+##### Highlights:
+This code demonstrates a hybrid approach of combining traditional HMM concepts with modern neural networks to enhance sequence modeling and probabilistic inference.
+
+
+
+
+
+## Introduction to the Paper
 
 Imagine building a robot. You wouldn't just slap some metal together and hope for the best, right? You'd need blueprints, measurements, and a solid understanding of physics to make sure it works. That's where math comes in for computer science too!
 Think of "combinatorial geometric series" and the "Binomial Theorem" as powerful tools in our toolbox. They help us tackle tricky problems involving combinations and probabilities, like figuring out the best way to arrange a bunch of different parts or predicting how likely something is to happen.
