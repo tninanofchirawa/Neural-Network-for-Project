@@ -1,4 +1,4 @@
-# Table of content:
+### Table of content:
 1) About the code
 2) Introduction
 3) Theoretical Insights and Computational Advantages
